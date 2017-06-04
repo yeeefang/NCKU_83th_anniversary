@@ -1,0 +1,10 @@
+.chaoverscroll {
+    overflow:hidden;
+    height:20px;
+    text-align: center;
+    background: black;
+}
+
+.chaoverscroll div,.chaoverscroll a {
+    color: #CCF0FC;
+}

@@ -1,0 +1,95 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+.nav2 span.dropBottom,span.dropRight {
+	display: block;
+	box-shadow:inset 2px 0px 0px #0086E6;
+	position: absolute;
+	left: 0px;
+	width:100%;
+	height: 100%;
+	top: 0px;
+}
+.nav2 nav span.dropBottom {
+	box-shadow:inset 0px 2px 0px #0086E6;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+.nav2 {
+    width:100%;
+	background-color:black;
+	position:fixed;
+	top:-65px;
+	left: 0px;
+	right: 0px;
+}
+.nav2 nav {
+	display:table;
+	margin:auto;
+    /*box-shadow:0px 2px 0px #023333;*/
+}
+.nav2 ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.nav2 ul ul {
+	opacity:0;
+	position:absolute;
+	top:150%;
+	visibility:hidden;
+	transition:all .4s ease;
+	-webkit-transition:all .4s ease;
+}
+.nav2 ul ul ul {
+	top:0%;
+	left:120%;
+}
+.nav2 ul ul li:hover > ul {
+	top:0%;
+	left:100%;
+	opacity:1;
+	visibility:visible;
+}
+.nav2 ul li:hover > ul {
+	opacity:1;
+	top:100%;
+	visibility:visible;
+}
+.nav2 ul li {
+	float:left;
+	position:relative;
+}
+.nav2 ul ul li {
+	float:none;
+}
+.nav2 ul li {
+	background-color:black;
+	cursor: pointer;
+}
+.nav2 ul a {
+	text-decoration:none;
+	display:block;
+	color:#FFDD55;
+	padding:10px 15px;
+	width:6em;
+	text-align:center;
+    text-shadow: 0px -1px 0px rgba(0,0,0,.2);
+}
+.nav2 ul li:hover {
+	background-color:#007373;
+}
+.nav2 ul li a:hover {
+	background-color:#007373;
+}
+.home-icon {
+    width: 3em;
+}
+.home-icon img {
+	text-decoration:none;
+	display:block;
+	color:#FF9;
+	width:1.2em;
+	text-align:center;
+}

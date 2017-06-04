@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="icon" href="logo.png" type="image/ico" />
+    <meta charset="UTF-8">    
+    <title> 成大83周年校慶系列活動 x 【成大拓荒季】 </title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/topmenu.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/mymarquee.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://activity.nckustudents.org/css/modernizr.custom.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56281887-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+    <script>//檢查是否使用IE
+    /*function getIEVersion()
+{
+  var rv = -1;
+  if (navigator.appName == 'Microsoft Internet Explorer')
+  {
+    var ua = navigator.userAgent;
+    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    if (re.exec(ua) != null)
+      rv = parseFloat( RegExp.$1 );
+  }
+  else if (navigator.appName == 'Netscape')
+  {
+    var ua = navigator.userAgent;
+    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");  //for IE 11
+    if (re.exec(ua) != null)
+      rv = parseFloat( RegExp.$1 );
+  }
+  return rv;
+}
+    if (getIEVersion() =="6" || getIEVersion() =="7" || getIEVersion() =="8" || getIEVersion() =="9" || getIEVersion() =="10" || getIEVersion() =="11")
+    {
+        alert('[Internet Explorer網站不支援]\n很抱歉，因為IE並無法完整支援js與css等語法\n頁面將無法正常顯示\n建議您更換瀏覽器使用Chrome或Safari以獲得最佳使用體驗\n\n拓荒季籌備團隊暨資訊部門'); 
+    } */
+    if(window.screen.width < 1000 ||　window.screen.height <600)
+    {
+    	alert('您的解析度過低，無法正確瀏覽本網站!\n為確保正常瀏覽本網站，請調整螢幕解析度至少1024x768！');
+    }
+    else
+    {
+    	window.moveTo(0,0);
+        window.resizeTo(window.screen.availWidth-1,window.screen.availHeight-1);/*對視窗resize到最大化*/
+    if(document.documentElement.clientWidth < 1000 || document.documentElement.clientWidth <500)
+    {
+    		alert('您的瀏覽器視窗過小，無法正確瀏覽本網站！\n為確保正常瀏覽本網站，請將網頁瀏覽器視窗最大化！\n受影響的瀏覽器：Chrome、Firefox');
+    }
+    }
+    </script>
+    <style>
+      a {
+	text-decoration:none;
+      }
+    </style>
+     <!--<?php include_once("analyticstracking.php") ?>-->
+  </head>
+  <body onmousewheel="return false;">
+    <div class="outter-nav">
+      <div id="cbp-fwslider" class="cbp-fwslider">
+        <ul>
+          <li><a class="enter" style="margin-top:0px; "><img src="banner.jpg" style="height=100%;" /></a></li>
+	</ul>
+      </div><!-- fwslider -->
+      
+      <div class="line" style="margin-top:5px;"></div>
+        <div id="chaoverscroll_box" class="chaoverscroll" >
+          <div class="chaoverscroll"><a>成大  X  拓荒季</a></div>
+         <!-- <div class="chaoverscroll"><a>屬於成大拓荒的故事</a></div>
+                    <div class="chaoverscroll"><a>活動日期：2014年11月09日(日) 12時~17時</a></div>-->
+
+        </div>
+      <div class="line" style="margin-bottom:5px;"></div>
+	    
+        
+      <div class="nav">
+        <nav>
+    	  <ul>
+    	    <li id="indexIcon" class="home-icon"><a title="學生會官方網站" href="https://www.nckustudents.org"><img src="sulogo.png" /></a></li> 
+    	    <li class="option" id="nckusu"><a href="#">籌備 </a><span class="dropBotton"></span>
+    	    <li class="option" id="news"><a href="#">最新消息 </a><span class="dropBotton"></span>
+    	    <li class="option" id="origination1"><a title="拓荒X源" href="#"> 拓荒X源 </a><span></span>
+    	      <ul>
+    	        <li id="origination"><a href="#"> 起源 </a></li>
+    	        <li id="goWild" class="option"><a href="#"> 《拓野歌》 </a></li>
+    	      </ul>
+    	    </li>
+    	    <li id="coCreative" class="option"><a href="#"> 共榮創作 </a></li>
+    	    <li class="option"><a> 成火祭典 </a><span ></span>
+    	      <ul>
+    	        <li id="nckugo"><a href="#"> 全成大爆走 </a></li>
+    	        <li id="nckuFiesta"><a href="#"> 成火晚會 </a></li>
+    	      </ul>
+    	    </li>
+    	    <li class="option"><a> 拓荒遊樂園 </a>
+    	      <ul>
+    	        <li><a> 全成市集 </a><span class="dropRight"></span>
+    	          <ul>
+    	            <li id="shop"><a href="#"> 園遊會 </a></li>
+    	            <li id="puzzle"><a href="#"> 文創市集 </a></li>
+    	            <!--li id="nckuFiesta"><a href="#"> 街頭藝人表演 </a></li-->
+    	          </ul>
+    	        </li>
+    	        <li><a> 樂園設施 </a><span class="dropRight"></span>
+    	          <ul>
+    	            <li id="bubbleRush"><a href="#"> 泡泡足球 </a></li>
+    	            <li id="cart"><a href="#">遊園馬車 </a></li>
+    	            <li id="cityWender"><a href="#"> 浪人體驗 </a></li>
+    	            <li id="earthExp"><a href="#"> 純粹地球展 </a></li>
+    	            <li id="icecream"><a href="#"> 冰淇淋企劃 </a></li>
+    	            <!--li id="lakeWar"><a href="#"> 成功湖戰 </a></li>
+    	            <li id="platformShow"><a href="#"> 動態舞台 </a></li>
+    	            <li id="intAffairsAct"><a href="#"> 城外x成外 </a></li-->
+    	          </ul>
+    	            <li class="option" id="concert"><a> 樂園演唱會 </a>
+    	        </li>
+    	        <!--<li id="market"><a href="#"> 全成市集 </a></li>
+    	        <li id="platformShow"><a href="#"> 動態舞台表演 </a></li>
+    	        <li id="lakeWar"><a href="#"> 成功湖戰 </a></li>
+    	        <li id="mountainRover"><a href="#"> 登山拓荒 </a></li>
+    	        <li id="experience"><a href="#"> 浪人體驗 </a></li>
+    	        <li id="earthExp"><a href="#"> 純粹地球展 </a></li>
+    	        <li id="techExp"><a href="#"> 科技屋 </a></li>
+    	        <li id="intAffairsAct"><a href="#"> 城外x成外 </a></li>-->
+    	      </ul>
+    	    </li>
+    	    <li id="souvenir" class="option"><a href="#"> 校慶紀念品 </a></li>
+    	    
+    	    <li id="shopAly" class="option"><a href="#"> 市集擺攤 </a>
+    	      <ul>
+    	        
+    	     <!--   <li id="aboutUs"><a href="#"> 選項B </a></li>
+    	        <li id="property"><a href="#"> 選項C </a></li>-->
+    	      </ul>
+    	    </li>
+
+    	    <li id="foldBtn" class="foldBtn"><a></a></li>
+          </ul>
+	</nav>
+	    <!-- dropBottom sample
+	    <li><a>Tutorials</a><span class="dropBottom"></span>
+              <ul>
+                <li><a>Design</a><span class="dropRight"></span>
+                  <ul>
+                    <li><a>Photoshop</a></li>
+                    <li><a>Illustrator</a></li>
+                    <li><a>Web Design</a><span class="dropRight"></span>
+                      <ul>
+                        <li><a>XTHML</a></li>
+                        <li><a>CSS</a></li>
+                        <li><a>JavaScript</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a>Articless</a></li>
+                <li><a>Interviews</a></li>
+              </ul>
+            </li>
+            dropBottom sample -->
+      </div><!-- nav -->
+    </div><!-- outer nav -->
+				
+    <div class="main">
+      <ul>			
+        <p></p>
+      </ul>
+    </div><!-- main -->
+	
+    <div id="textBoard" style="background-color: #DDDDDD; display: none; position: fixed; top: 50%;  left: 50%;"></div>
+    <div id="divProgress" style="text-align:center; display: none; position: fixed; top: 50%;  left: 50%;">
+      <h1 color="white" size="10px">拓荒中...</h1>
+      <img src="https://activity.nckustudents.org/css/loading.gif" />
+    </div>
+    <div id="divMaskFrame" style="background-color: #DDDDDD; display: none; left: 0px; position: fixed; top: 0px;"></div>
+			
+    <script>
+      function ifGalleryShow() {
+	if($(".cbp-fwslider").css("visibility") == "visible")
+          return true;
+        else if($(".cbp-fwslider").css("visibility") == "hidden")
+          return false;
+	return null;
+      }
+    </script>
+
+    <script>
+      // 顯示讀取遮罩
+      function ShowProgressBar() {
+	displayProgress();
+	displayMaskFrame();
+      }
+			
+      function firstShowProgressBar() {
+        firstDisplayProgress();
+        displayMaskFrame();
+        showGallery();
+      }
+
+      // 隱藏讀取遮罩
+      function HideProgressBar() {
+        var progress = $('#divProgress');
+	var maskFrame = $("#divMaskFrame");
+	var board = $('#textBoard');
+	progress.fadeOut(500);
+	maskFrame.fadeOut(500);
+	board.fadeOut(500);
+      }
+      
+      // 顯示讀取畫面
+      function displayProgress() {
+	var w = $(document).width();
+	var h = $(window).height();
+	var progress = $('#divProgress');
+	progress.css({
+          "z-index": 999999,
+	  "top": (h / 2) - (progress.height() / 2),
+	  "left": (w / 2) - (progress.width() / 2)
+	});
+	progress.fadeIn(500);
+      }
+
+      // 顯示遮罩畫面
+      function displayMaskFrame() {
+        var w = $(window).width();
+	var h = $(document).height();
+	var maskFrame = $("#divMaskFrame");
+	maskFrame.css({
+	  "z-index": 999998,
+	  "opacity": 0,
+	  "width": w,
+	  "height": h
+        });
+        maskFrame.fadeIn(500);
+      }
+
+      // 首次讀取
+      function firstDisplayProgress() {
+	var w = $(document).width();
+	var h = $(window).height();
+	var progress = $('#divProgress');
+	var board = $('#textBoard');
+	progress.css({
+	  "z-index": 999999,
+	  "top": (h / 2) - (progress.height() / 2),
+	  "left": (w / 2) - (progress.width() / 2)
+	});
+	board.css({
+	  "opacity": 0.7,
+	  "z-index": 999999,
+	  "top": (h / 2) - (progress.height()*1.2 / 2),
+	  "left": (w / 2) - (progress.width()*1.2 / 2),
+	  "height": progress.height() * 1.2,
+	  "width": progress.width() * 1.2
+	});
+	progress.fadeIn(500);
+	board.fadeIn(500);
+      }
+    </script>
+
+    <script>
+      function loadContent(id,src) {
+          $(id).click(function() {
+          ShowProgressBar();
+	  $(".main").fadeOut(500, function() {
+	    $(".main").load(src, function(){
+	      HideProgressBar();
+	      $(".main").fadeIn(500);
+	      });
+	    });
+	});
+      }
+    </script>
+
+    <script>
+      function showGallery(){
+        $(".cbp-fwslider").css({"visibility": "visible"});
+	$(".cbp-fwslider").animate({"height": $(window).height()-71},500);
+        $(".foldBtn a").text("Δ收起形象頁");
+        $("body").css("overflow", "hidden");
+      }
+
+      function hideGallery(){
+        $(".cbp-fwslider").animate({"height": "0px"},500, function() {
+	  $(".cbp-fwslider").css({"visibility": "hidden"});
+          $(".foldBtn a").text("∇展開形象頁");
+          $("body").css("overflow", "visible");
+          $("body").css("scrollbar", "yes");
+        });
+      }
+
+    </script>
+			
+    <script>
+      $(document).ready(function () {
+        $(".cbp-fwslider").css("height", $(window).height());
+	firstShowProgressBar();
+	
+	$(".main").load("news.html",function() {
+	  HideProgressBar();
+        });
+						
+   //loadContent("#indexIcon" , "https://www.nckustudents.org");
+	loadContent("#nckusu" , "crew.html");
+	loadContent("#news" , "news.html");
+	loadContent("#origination" , "origination.html");
+	loadContent("#origination1" , "origination.html");
+    loadContent("#coCreative" , "coCreative.html");
+	loadContent("#nckugo" , "nckuGo.html");
+	loadContent("#nckuFiesta" , "nckuFiesta.html");
+	loadContent("#shop" , "list.php");
+	loadContent("#puzzle" , "puzzle.html");
+	loadContent("#bubbleRush" , "bubbleRush.html");
+	loadContent("#cart" , "cart.html");
+    loadContent("#concert" , "concert.html");
+	loadContent("#cityWender" , "cityWender.html");
+	loadContent("#earthExp" , "earthExp.html");
+	loadContent("#souvenir" , "tobecontinued.html");
+    loadContent("#shopAly" , "list.php");
+    loadContent("#icecream" , "icecream.html");
+						
+	$(".foldBtn").click(function() {
+	  if(ifGalleryShow()) {
+	    hideGallery();
+	     
+	  } 
+	  if(ifGalleryShow()!=1 && $('.nav nav').css("position") == "fixed")
+	  {
+            window.document.body.scrollTop = 0;
+        window.document.documentElement.scrollTop = 0;
+        
+	  	 }
+      if(ifGalleryShow()!=1 && $('.nav nav').css("position") != "fixed")
+      {
+      	window.document.body.scrollTop = 0;
+        window.document.documentElement.scrollTop = 0;
+        showGallery();
+      }
+        $("body").css("scrollbar", "yes");
+	});
+						
+	$(".enter").click(function() {
+	  hideGallery();  
+	  $("body").css({"overflow": "auto"});
+	  $("body").attr("onmousewheel","return true;");
+	});
+	
+	$(".option").click(function() {
+	  	if(ifGalleryShow()){
+	  hideGallery();  
+	  $("body").css({"overflow": "auto"});
+	  $("body").attr("onmousewheel","return true;");
+	   $("body").css("scrollbar", "yes");
+	}});
+		$(".home-icon").click(function() {
+	  	if(ifGalleryShow()){
+	  hideGallery();  
+	  $("body").css({"overflow": "auto"});
+	  $("body").attr("onmousewheel","return true;");
+	   $("body").css("scrollbar", "yes");
+	}});
+
+
+	$(window).resize( function() { 
+	  if(ifGalleryShow())
+	    $(".cbp-fwslider").css("height", $(window).height()-71); 
+	});
+						
+	$(".cbp-fwslider").css({"visibility": "visible", "max-height": $(window).height()});
+				        
+	if(ifGalleryShow())
+          $(".foldBtn a").text("");
+        else
+          $(".foldBtn a").text("∇展開形象頁");
+	/*$("#foldBtn").hover( function() {
+	    if($(".cbp-fwslider").css("visibility") == "visible")
+              $("#foldBtn a").text("Δ收起");
+            else if($(".cbp-fwslider").css("visibility") == "hidden")
+              $("#foldBtn a").text("∇展開");
+          }, function() {
+            if($(".cbp-fwslider").css("visibility") == "visible")
+              $("#foldBtn a").text("Δ");
+            else if($(".cbp-fwslider").css("visibility") == "hidden")
+              $("#foldBtn a").text("∇");
+          }
+	);*/
+      }); /* document ready */
+    </script>
+			
+    <script src="https://activity.nckustudents.org/css/jquery.cbpFWSlider.min.js"></script>
+    <script>
+      $( function() {
+        /*
+	- how to call the plugin:
+	$( selector ).cbpFWSlider( [options] );
+	- options:
+	{
+		// default transition speed (ms)
+		speed : 500,
+		// default transition easing
+		easing : 'ease'
+	}
+	- destroy:
+	$( selector ).cbpFWSlider( 'destroy' );
+	*/
+
+        $( '#cbp-fwslider' ).cbpFWSlider();
+      } );
+    </script>
+
+    <script type="text/javascript"> 
+      function slideLine(box,stf,delay,speed,h)
+      {
+        //取得id
+        var slideBox = document.getElementById(box);
+        
+	//預設值 delay:幾毫秒滾動一次(1000毫秒=1秒)
+        // speed:數字越小越快，h:高度
+        var delay = delay||2000,speed = speed||20,h = h||20;
+        var tid = null,pause = false;
+        
+	//setInterval跟setTimeout的用法可以咕狗研究一下~
+        var s = function(){tid=setInterval(slide, speed);}
+        
+	//主要動作的地方
+        var slide = function(){
+          //當滑鼠移到上面的時候就會暫停
+          if(pause) return;
+          //滾動條往下滾動 數字越大會越快但是看起來越不連貫，所以這邊用1
+          slideBox.scrollTop += 1;
+          //滾動到一個高度(h)的時候就停止
+          if(slideBox.scrollTop%h == 0){
+            //跟setInterval搭配使用的
+            clearInterval(tid);
+            //將剛剛滾動上去的前一項加回到整列的最後一項
+            slideBox.appendChild(slideBox.getElementsByTagName(stf)[0]);
+            //再重設滾動條到最上面
+            slideBox.scrollTop = 0;
+            //延遲多久再執行一次
+            setTimeout(s, delay);
+          }
+        }
+        
+	//滑鼠移上去會暫停 移走會繼續動
+        slideBox.onmouseover=function(){pause=true;}
+        slideBox.onmouseout=function(){pause=false;}
+        
+	//起始的地方，沒有這個就不會動囉
+        setTimeout(s, delay);
+      }
+      
+      //網頁load完會執行一次
+      //五個屬性各別是：外面div的id名稱、包在裡面的標籤類型
+      //延遲毫秒數、速度、高度
+      slideLine('chaoverscroll_box','div',3000,25,20);
+    </script>
+    <script type='text/javascript'>
+      $(function(){
+　      $(window).load(function(){
+　　	  $(window).bind('scroll resize', function(){
+　　	    var $this = $(this);
+　　	    var $this_Top=$this.scrollTop();
+　　	    var navheight = 0;
+　　	    if(ifGalleryShow())	{
+	      navheight = $(window).height();
+	    } else {
+              navheight = 71;
+            }
+	    
+	    //當高度小於100時，關閉區塊 
+　　	    if($this_Top < navheight){
+　　　	      /*$('.nav nav').stop().animate({top:"-30px"}, function(){*/
+　　　　      if($('.nav nav').css("position") == "fixed" )
+　　	      $('.nav nav').css({position:"relative" , top:"0px"})
+　　	      	if(ifGalleryShow()!=1){
+　　	      $(".foldBtn a").text("∇展開形象頁");
+　　	      	}
+　　　	      /*});*/
+　　　	    }
+　　　　    if($this_Top > navheight){
+　　　　      if($('.nav nav').css("position") != "fixed" )
+　　	      $('.nav nav').css({position:"fixed" , top:"-40px" , "margin-left":"-465px" , left:"50%"})
+　　	      $('.nav nav').stop().animate({top:"0px"});
+　　	      $(".foldBtn a").text("回到頁首");
+　　　 	    }
+　　	  }).scroll();
+　	});
+      });
+    </script>
+    
+    <div id="fb-root"></div>
+    <!--script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script-->
+  </body>
+  <footer></footer>	
+</html>

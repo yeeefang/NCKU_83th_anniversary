@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">    
+    <title> 拓荒季 x 國立成功大學學生會 </title>
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/topmenu.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/mymarquee.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-54802412-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <style>
+      a {
+	text-decoration:none;
+      }
+    </style>
+  </head>
+
+  <body onmousewheel="return false;">
+    <div class="outter-nav">
+      <div id="cbp-fwslider" class="cbp-fwslider">
+        <ul>
+          <li><a href="#" class="enter" style="margin-top:80px;"><img src="banner.jpg" alt="img00"/></a></li>
+	</ul>
+      </div><!-- fwslider -->
+      
+      <div class="line" style="margin-top:5px;"></div>
+        <div id="chaoverscroll_box" class="chaoverscroll" >
+          <div class="chaoverscroll"><a>成大拓荒季 x 成大學生會</a></div>
+        </div>
+      <div class="line" style="margin-bottom:5px;"></div>
+	    
+        
+      <div class="nav">
+        <nav>
+    	  <ul>
+    	    <li id="indexIcon" class="home-icon"><a title="Home" href="#"><img src="sulogo.png" /></a></li>
+    	    <li id="clubClassContent"><a href="#"> 拓荒 x 季 </a></li>
+    	    <li id="clubActivities"><a href="#"> 校慶遊樂園 </a></li>
+    	    <li id="dreamLand"><a href="#"> 社團擺攤 </a></li>
+    	    <li id="discussionArea"><a href="#"> 成大學生會 </a></li>
+    	    <li id="foldBtn" class="foldBtn"><a></a></li>
+          </ul>
+	</nav>
+	    <!-- dropBottom sample
+	    <li><a>Tutorials</a><span class="dropBottom"></span>
+              <ul>
+                <li><a>Design</a><span class="dropRight"></span>
+                  <ul>
+                    <li><a>Photoshop</a></li>
+                    <li><a>Illustrator</a></li>
+                    <li><a>Web Design</a><span class="dropRight"></span>
+                      <ul>
+                        <li><a>XTHML</a></li>
+                        <li><a>CSS</a></li>
+                        <li><a>JavaScript</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a>Articless</a></li>
+                <li><a>Interviews</a></li>
+              </ul>
+            </li>
+            dropBottom sample -->
+      </div><!-- nav -->
+    </div><!-- outer nav -->
+				
+    <div class="main">
+      <ul>			
+        <p></p>
+      </ul>
+    </div><!-- main -->
+	
+    <div id="textBoard" style="background-color: #F2F4F7; display: none; position: fixed; top: 50%;  left: 50%;"></div>
+    <div id="divProgress" style="text-align:center; display: none; position: fixed; top: 50%;  left: 50%;">
+      <h1 color="white" size="10px">Loading...</h1>
+      <img src="http://web.ccns.ncku.edu.tw/images/loading.gif" />
+    </div>
+    <div id="divMaskFrame" style="background-color: #F2F4F7; display: none; left: 0px; position: fixed; top: 0px;"></div>
+			
+    <script>
+      function ifGalleryShow() {
+	if($(".cbp-fwslider").css("visibility") == "visible")
+          return true;
+        else if($(".cbp-fwslider").css("visibility") == "hidden")
+          return false;
+	return null;
+      }
+    </script>
+
+    <script>
+      // 顯示讀取遮罩
+      function ShowProgressBar() {
+	displayProgress();
+	displayMaskFrame();
+      }
+			
+      function firstShowProgressBar() {
+        firstDisplayProgress();
+        displayMaskFrame();
+      }
+
+      // 隱藏讀取遮罩
+      function HideProgressBar() {
+        var progress = $('#divProgress');
+	var maskFrame = $("#divMaskFrame");
+	var board = $('#textBoard');
+	progress.fadeOut(1000);
+	maskFrame.fadeOut(1000);
+	board.fadeOut(1000);
+      }
+      
+      // 顯示讀取畫面
+      function displayProgress() {
+	var w = $(document).width();
+	var h = $(window).height();
+	var progress = $('#divProgress');
+	progress.css({
+          "z-index": 999999,
+	  "top": (h / 2) - (progress.height() / 2),
+	  "left": (w / 2) - (progress.width() / 2)
+	});
+	progress.fadeIn(1000);
+      }
+
+      // 顯示遮罩畫面
+      function displayMaskFrame() {
+        var w = $(window).width();
+	var h = $(document).height();
+	var maskFrame = $("#divMaskFrame");
+	maskFrame.css({
+	  "z-index": 999998,
+	  "opacity": 0,
+	  "width": w,
+	  "height": h
+        });
+        maskFrame.fadeIn(1000);
+      }
+
+      // 首次讀取
+      function firstDisplayProgress() {
+	var w = $(document).width();
+	var h = $(window).height();
+	var progress = $('#divProgress');
+	var board = $('#textBoard');
+	progress.css({
+	  "z-index": 999999,
+	  "top": (h / 2) - (progress.height() / 2),
+	  "left": (w / 2) - (progress.width() / 2)
+	});
+	board.css({
+	  "opacity": 0.7,
+	  "z-index": 999999,
+	  "top": (h / 2) - (progress.height()*1.2 / 2),
+	  "left": (w / 2) - (progress.width()*1.2 / 2),
+	  "height": progress.height() * 1.2,
+	  "width": progress.width() * 1.2
+	});
+	progress.fadeIn(1000);
+	board.fadeIn(1000);
+      }
+    </script>
+
+    <script>
+      function loadContent(id,src) {
+          $(id).click(function() {
+          ShowProgressBar();
+	  $(".main").fadeOut(1000, function() {
+	    $(".main").load(src, function(){
+	      HideProgressBar();
+	      $(".main").fadeIn(1000);
+	      });
+	    });
+	});
+      }
+    </script>
+
+    <script>
+      function showGallery(){
+        $(".cbp-fwslider").css({"visibility": "visible"});
+	$(".cbp-fwslider").animate({"height": $(window).height()-71},1000);
+        $(".foldBtn a").text("Δ收起橫幅");
+      }
+
+      function hideGallery(){
+        $(".cbp-fwslider").animate({"height": "0px"},1000, function() {
+	  $(".cbp-fwslider").css({"visibility": "hidden"});
+          $(".foldBtn a").text("∇展開橫幅");
+        });
+      }
+
+    </script>
+			
+    <script>
+      $(document).ready(function () {
+        $(".cbp-fwslider").css("height", $(window).height());
+	firstShowProgressBar();
+	
+	$(".main").load("home.html #content",function() {
+	  HideProgressBar();
+        });
+						
+        loadContent("#indexIcon" , "home.html #content");
+	loadContent("#clubHistory" , "about.html #ClubHistory");
+	loadContent("#aboutUs" , "about.html #AboutUs");
+        loadContent("#property" , "property.html #property");
+	loadContent("#clubClassContent" , "classes.html #DivClubClassContent");
+	loadContent("#clubActivities" , "activities.html #DivClubActivities");
+	loadContent("#dreamLand" , "dreamLand.html #DivDreamLand");
+	loadContent("#discussionArea" , "discussion.html #DivDiscussionArea");
+	loadContent("#CCNSZone" , "ccnser.html #DivCCNSZone");
+						
+	$(".foldBtn").click(function() {
+	  if(ifGalleryShow()) {
+	    hideGallery();
+	  } else {
+            showGallery();
+          }
+	});
+						
+	$(".enter").click(function() {
+	  hideGallery();  
+	  $("body").css({"overflow": "auto"});
+	  $("body").attr("onmousewheel","return true;");
+	});
+
+	$(window).resize( function() { 
+	  if(ifGalleryShow())
+	    $(".cbp-fwslider").css("height", $(window).height()-71); 
+	});
+						
+	$(".cbp-fwslider").css({"visibility": "visible", "max-height": $(window).height()});
+				        
+	if(ifGalleryShow())
+          $(".foldBtn a").text("Δ收起Gallary");
+        else
+          $(".foldBtn a").text("∇展開Gallary);
+	/*$("#foldBtn").hover( function() {
+	    if($(".cbp-fwslider").css("visibility") == "visible")
+              $("#foldBtn a").text("Δ收起");
+            else if($(".cbp-fwslider").css("visibility") == "hidden")
+              $("#foldBtn a").text("∇展開");
+          }, function() {
+            if($(".cbp-fwslider").css("visibility") == "visible")
+              $("#foldBtn a").text("Δ");
+            else if($(".cbp-fwslider").css("visibility") == "hidden")
+              $("#foldBtn a").text("∇");
+          }
+	);*/
+      }); /* document ready */
+    </script>
+			
+    <script src="http://web.ccns.ncku.edu.tw/js/jquery.cbpFWSlider.min.js"></script>
+    <script>
+      $( function() {
+        /*
+	- how to call the plugin:
+	$( selector ).cbpFWSlider( [options] );
+	- options:
+	{
+		// default transition speed (ms)
+		speed : 500,
+		// default transition easing
+		easing : 'ease'
+	}
+	- destroy:
+	$( selector ).cbpFWSlider( 'destroy' );
+	*/
+
+        $( '#cbp-fwslider' ).cbpFWSlider();
+      } );
+    </script>
+
+    <script type="text/javascript"> 
+      function slideLine(box,stf,delay,speed,h)
+      {
+        //取得id
+        var slideBox = document.getElementById(box);
+        
+	//預設值 delay:幾毫秒滾動一次(1000毫秒=1秒)
+        // speed:數字越小越快，h:高度
+        var delay = delay||2000,speed = speed||20,h = h||20;
+        var tid = null,pause = false;
+        
+	//setInterval跟setTimeout的用法可以咕狗研究一下~
+        var s = function(){tid=setInterval(slide, speed);}
+        
+	//主要動作的地方
+        var slide = function(){
+          //當滑鼠移到上面的時候就會暫停
+          if(pause) return;
+          //滾動條往下滾動 數字越大會越快但是看起來越不連貫，所以這邊用1
+          slideBox.scrollTop += 1;
+          //滾動到一個高度(h)的時候就停止
+          if(slideBox.scrollTop%h == 0){
+            //跟setInterval搭配使用的
+            clearInterval(tid);
+            //將剛剛滾動上去的前一項加回到整列的最後一項
+            slideBox.appendChild(slideBox.getElementsByTagName(stf)[0]);
+            //再重設滾動條到最上面
+            slideBox.scrollTop = 0;
+            //延遲多久再執行一次
+            setTimeout(s, delay);
+          }
+        }
+        
+	//滑鼠移上去會暫停 移走會繼續動
+        slideBox.onmouseover=function(){pause=true;}
+        slideBox.onmouseout=function(){pause=false;}
+        
+	//起始的地方，沒有這個就不會動囉
+        setTimeout(s, delay);
+      }
+      
+      //網頁load完會執行一次
+      //五個屬性各別是：外面div的id名稱、包在裡面的標籤類型
+      //延遲毫秒數、速度、高度
+      slideLine('chaoverscroll_box','div',3000,25,20);
+    </script>
+    <script type='http://web.ccns.ncku.edu.tw/text/javascript'>
+      $(function(){
+　      $(window).load(function(){
+　　	  $(window).bind('scroll resize', function(){
+　　	    var $this = $(this);
+　　	    var $this_Top=$this.scrollTop();
+　　	    var navheight = 0;
+　　	    if(ifGalleryShow())	{
+	      navheight = $(window).height();
+	    } else {
+              navheight = 71;
+            }
+	    
+	    //當高度小於100時，關閉區塊 
+　　	    if($this_Top < navheight){
+　　　	      /*$('.nav nav').stop().animate({top:"-30px"}, function(){*/
+　　　　      if($('.nav nav').css("position") == "fixed" )
+　　	      $('.nav nav').css({position:"relative" , top:"0px"})
+　　　	      /*});*/
+　　　	    }
+　　　　    if($this_Top > navheight){
+　　　　      if($('.nav nav').css("position") != "fixed" )
+　　	      $('.nav nav').css({position:"fixed" , top:"-40px" , "margin-left":"-465px" , left:"50%"})
+　　	      $('.nav nav').stop().animate({top:"0px"});
+　　　 	    }
+　　	  }).scroll();
+　	});
+      });
+    </script>
+  </body>
+  <footer></footer>	
+</html>
